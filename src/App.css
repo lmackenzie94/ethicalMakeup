@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    text-align: center;
-    font-size: 1rem;
-    font-family: 'Hind Siliguri', sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 .wrapper {
@@ -14,8 +14,10 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-family: 'Cormorant', serif;  
+h1,
+h2,
+h3 {
+  font-family: "Cormorant", serif;
 }
 
 h1 {
@@ -25,11 +27,11 @@ h1 {
 }
 
 p {
-  font-family: 'Hind Siliguri',sans-serif;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 header {
-  background: url('assets/image.jpg') no-repeat;
+  background: url("assets/image.jpg") no-repeat;
   background-size: cover;
   background-position: center top;
   height: 100vh;
@@ -46,36 +48,32 @@ main {
 }
 
 .button {
-  background-color: #4CD3AA;
+  background-color: #4cd3aa;
   border: none;
-  border-radius: 10px;
+  border-radius: 2px;
   color: white;
-  padding: 5px 30px;
+  padding: 5px 20px;
   text-decoration: none;
-  box-shadow: 2px 2px 5px 1px rgba(117,100,117,1);
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   clear: both;
   display: inline-block;
 }
 
+.button:hover,
 .button:active {
-        box-shadow:  -1px -1px 0px -3px;
-}
-.button:hover {
-    background-color: #3FBC96;
+  background-color: rgb(69, 172, 141);
 }
 
 /* ANIMATION */
 
 @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(405px);
-    }
-    to {
-      opacity: 2;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(405px);
   }
-
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}

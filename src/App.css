@@ -47,12 +47,21 @@ main {
   background: white;
 }
 
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: #4cd3aa;
+}
+
 .button {
   background-color: #4cd3aa;
   border: none;
   border-radius: 2px;
   color: white;
-  padding: 5px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;

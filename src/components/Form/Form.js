@@ -2,11 +2,13 @@ import React from "react";
 import "./Form.css";
 
 const Form = props => {
+  const { handleFormChange, handleSubmit } = props;
+
   return (
     <form
       className="formReview wrapper clearfix"
       action="submit"
-      onSubmit={props.handleSubmit}
+      onSubmit={handleSubmit}
     >
       <div className="formName">
         <label htmlFor="reviewName" className="visuallyHidden">
@@ -18,7 +20,7 @@ const Form = props => {
           id="reviewName"
           name="reviewName"
           placeholder="Your name"
-          onChange={props.handleFormChange}
+          onChange={handleFormChange}
         />
       </div>
       <div className="buyAgain">
@@ -30,7 +32,7 @@ const Form = props => {
             id="yes"
             name="buyAgain"
             value="Would buy again"
-            onChange={props.handleFormChange}
+            onChange={handleFormChange}
           />
           <label htmlFor="yes">Yes</label>
           <input
@@ -39,7 +41,7 @@ const Form = props => {
             id="no"
             name="buyAgain"
             value="Would not buy again"
-            onChange={props.handleFormChange}
+            onChange={handleFormChange}
           />
           <label htmlFor="no">No</label>
         </div>
@@ -55,7 +57,7 @@ const Form = props => {
           cols="20"
           rows="5"
           name="reviewText"
-          onChange={props.handleFormChange}
+          onChange={handleFormChange}
         />
       </div>
       <div className="formButton">

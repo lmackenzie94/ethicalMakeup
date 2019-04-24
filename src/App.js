@@ -11,17 +11,14 @@ import { animateScroll as scroll } from "react-scroll";
 import swal from "sweetalert";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      userProduct: "",
-      userResults: [],
-      chosenProductObject: "",
-      reviews: [],
-      isLoading: false,
-      error: false
-    };
-  }
+  state = {
+    userProduct: "",
+    userResults: [],
+    chosenProductObject: "",
+    reviews: [],
+    isLoading: false,
+    error: false
+  };
 
   scrollToBottom = () => {
     scroll.scrollToBottom({
@@ -29,11 +26,11 @@ class App extends Component {
     });
   };
 
-  scrollTo = () => {
+  scrollTo = (scrollAmount, delay, duration) => {
     if (this.state.error) return;
-    scroll.scrollTo(705, {
-      delay: 800,
-      duration: 1500
+    scroll.scrollTo(scrollAmount, {
+      delay: delay,
+      duration: duration
     });
   };
 
@@ -119,6 +116,12 @@ class App extends Component {
     );
   };
 
+  handleKeyPress = chosenId => {
+    this.handleClick(chosenId);
+    // REVISE THIS: need to scroll to details section which can be different heights
+    this.scrollTo(1800, 200, 1500);
+  };
+
   // round prices to 2 decimal places
   round = price => {
     return Number.parseFloat(price).toFixed(2);
@@ -138,6 +141,7 @@ class App extends Component {
           <Gallery
             userResults={this.state.userResults}
             handleClick={this.handleClick}
+            handleKeyPress={this.handleKeyPress}
             round={this.round}
           />
           <section id="details">

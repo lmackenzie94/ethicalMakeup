@@ -45,7 +45,7 @@ const Details = props => {
           <div className="clearfix">
             {chosenProductObject.product_colors.map(color => {
               return (
-                <div className="colours">
+                <div className="colours" id={color.hex_value}>
                   <span
                     className="colour"
                     style={{ background: color.hex_value }}

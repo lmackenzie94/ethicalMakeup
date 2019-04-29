@@ -118,8 +118,7 @@ class App extends Component {
 
   handleKeyPress = chosenId => {
     this.handleClick(chosenId);
-    // REVISE THIS: need to scroll to details section which can be different heights
-    this.scrollTo(1800, 200, 1500);
+    this.scrollToBottom(); //not ideal but works enough for now
   };
 
   // round prices to 2 decimal places
